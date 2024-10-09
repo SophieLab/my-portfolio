@@ -1,21 +1,41 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
+// import components
+import Profile from "./components/Profile";
+import Navbar from "./Layouts/Navbar";
+import Skills from "./components/Skills";
+import Service from "./components/Services";
+import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
+import Contactme from "./components/Contactme";
+import Contact from "./components/Contact";
+import { useEffect } from "react";
+// Animation package
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1800,
+      offset: 100,
+      disable: "mobile",
+    });
+  }, []);
   return (
-    <Router>
+    <div className="">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+<Profile />     
+ <Skills />
+      <Service />
+      <Projects />
+      <Testimonials />
+<Contactme />
+      <Contact />
+      <footer className="p-3 text-center">
+        <h6 className="mb-3">JOHN ALEX</h6>
+        <p>codeaprogram © All CopyRights Reserved 2022</p>
+      </footer>
+    </div>
   );
-}
+};
+
 export default App;
