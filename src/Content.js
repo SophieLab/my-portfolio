@@ -1,12 +1,8 @@
 // Import images
 import Profile from "./assets/images/Profile/person.png";
 
-import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
+
 import reactjs from "./assets/images/Skills/react.png";
-import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
 
 import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/logo2.png";
@@ -66,48 +62,51 @@ export const content = {
     image: Profile,
     profile: [
       {
-        count: "8+",
-        text: "Années d'expérience en développement web", // Correction d'orthographe
+        count: "?",
+        text: "Lorem ipsum", // Correction d'orthographe
       },
       {
-        count: "20+",
-        text: "Projets réalisés dans ma carrière", // Correction d'orthographe
+        count: "?",
+        text: "Lorem ipsum", // Correction d'orthographe
       },
     ],
   },
   skills: {
-    title: "Compétences",
-    subtitle: "MES COMPÉTENCES",
+    title: "Mes Compétences",
+    subtitle: "Explorez mes compétences à travers différents domaines",
     skills_content: [
       {
-        name: "Figma",
-        para: "Lorem ipsum text dummy", // Suppression de l'espace en trop
-        logo: figma,
+        name: "Développement Web",
+        tools: [
+          "HTML",
+          "CSS",
+          {
+            name: "React",
+            image: reactjs, // Add the new image here
+          },
+          "JavaScript",
+          "NodeJs",
+          "Express",
+          "Typescript",
+          "Tailwind",
+          "Storybook",
+        ],
       },
       {
-        name: "Node.js", // Ajout de la ponctuation correcte
-        para: "Lorem ipsum text dummy",
-        logo: nodejs,
+        name: "Base de Données",
+        tools: ["SQL", "NoSQL", "MongoDB"],
       },
       {
-        name: "Adobe Photoshop",
-        para: "Lorem ipsum text dummy",
-        logo: ps,
+        name: "Versionning",
+        tools: ["GIT", "GitHub"],
       },
       {
-        name: "React.js", // Ajout de la ponctuation correcte
-        para: "Lorem ipsum text dummy",
-        logo: reactjs,
+        name: "Micro Services",
+        tools: ["API REST", "Axios", "Docker"],
       },
       {
-        name: "Sketch",
-        para: "Lorem ipsum text dummy",
-        logo: sketch,
-      },
-      {
-        name: "Python",
-        para: "Lorem ipsum text dummy",
-        logo: python,
+        name: "Conception",
+        tools: ["Figma", "Adobe XD", "Adobe Photoshop"],
       },
     ],
     icon: MdArrowForward,
