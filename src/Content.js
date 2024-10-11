@@ -13,13 +13,8 @@ import project2 from "./assets/images/projects/img2.png";
 import project3 from "./assets/images/projects/img3.png";
 import person_project from "./assets/images/projects/person.png";
 
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+
 
 // Import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -172,30 +167,24 @@ export const content = {
     testimonials_content: [
       {
         review: "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.”", // Correction de la phrase
-        img: avatar1,
         name: "JOHN DOE",
       },
       {
         review: "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.”",
-        img: avatar2,
         name: "Tom Alex",
       },
       {
         review: "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.”",
-        img: avatar3,
         name: "Johnny",
       },
       {
         review: "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.”",
-        img: avatar4,
         name: "ROBBIN",
       },
     ],
   },
   Contactme: {
     title: "Contactez moi",
-    image1: Hireme_person,
-    image2: Hireme_person2,
     para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document relying on meaning.", // Correction de la phrase
     btnText: "Contactez moi",
   },
