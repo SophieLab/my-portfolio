@@ -1,13 +1,13 @@
-import { content } from "../Content"; // Assurez-vous que le chemin est correct
+import { content } from "../Content";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Importer les styles de Swiper
+import 'swiper/swiper-bundle.css'; 
 
 const Projects = () => {
-  const { Projects: projects } = content; // Déstructuration des données des projets
+  const { Projects: projects } = content; 
 
   // Vérifiez si projects est défini et est un tableau
   if (!projects || !Array.isArray(projects) || projects.length === 0) {
-    return <div>No projects available.</div>; // Interface de secours si aucun projet n'existe
+    return <div>No projects available.</div>; 
   }
 
   return (
@@ -27,7 +27,7 @@ const Projects = () => {
           <div key={index} className="flex flex-col gap-5 items-center lg:flex-row">
             <img
               src={project.image}
-              alt="Project Visual" // Fournir une description alternative
+              alt="Project Visual"
               data-aos="fade-right"
               className="max-w-[45vw] min-w-[22rem]"
             />

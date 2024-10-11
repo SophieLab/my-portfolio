@@ -52,17 +52,17 @@ export const content = {
   profile: {
     title: "Développeuse Front-End",
     firstName: "",
-    lastName: "", // Corrigé "LastName" en "lastName" pour la convention camelCase
+    lastName: "",
     btnText: "Contactez Moi",
     image: Profile,
     profile: [
       {
         count: "?",
-        text: "Lorem ipsum", // Correction d'orthographe
+        text: "Lorem ipsum",
       },
       {
         count: "?",
-        text: "Lorem ipsum", // Correction d'orthographe
+        text: "Lorem ipsum",
       },
     ],
   },
@@ -77,7 +77,7 @@ export const content = {
           "CSS",
           {
             name: "React",
-            image: reactjs, // Add the new image here
+            image: reactjs,
           },
           "JavaScript",
           "NodeJs",
@@ -120,7 +120,7 @@ export const content = {
         logo: services_logo2,
       },
       {
-        title: "Stratégie SEO", // Correction d'orthographe
+        title: "Stratégie SEO",
         para: "En publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document relying on meaning.", // Correction de la phrase
         logo: services_logo3,
       },
@@ -128,7 +128,7 @@ export const content = {
   },
   Projects: [
     {
-      title: "Applications", // Titre du premier carrousel
+      title: "Applications",
       project_content: [
         {
           title: "Gaelo Flow",
@@ -139,12 +139,12 @@ export const content = {
       ],
     },
     {
-      title: "Ecommerce and sites vitrines", // Titre du deuxième carrousel
+      title: "Ecommerce and sites vitrines",
       project_content: [
         {
           title: "Creative Website",
           image: project3,
-          type: "ecommerce", // Exemple pour un site e-commerce
+          type: "ecommerce",
         },
       
       ],
@@ -161,7 +161,7 @@ export const content = {
       ],
     },
   ],
-  Testimonials: { // Correction : ajout du 'Testimonials' dans le bon contexte
+  Testimonials: { 
     title: "Témoignages",
     subtitle: "MES AVIS CLIENTS",
     testimonials_content: [
@@ -185,31 +185,27 @@ export const content = {
   },
   Contactme: {
     title: "Contactez moi",
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document relying on meaning.", // Correction de la phrase
+    para: "lorem ipsum.", 
     btnText: "Contactez moi",
   },
   Contact: {
-    title: "Contactez Moi", // Correction d'orthographe
+    title: "Contactez Moi", 
     subtitle: "ENTRER EN CONTACT",
     social_media: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "labytsophie@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:labytsophie@gmail.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "0670398936",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "/",
       },
-      {
-        text: "codeaprogram",
-        icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
-      },
+      
     ],
   },
   Footer: {
-    text: "Tous droits réservés © 2022", // Correction d'orthographe
+    text: "Tous droits réservés © 2024",
   },
 };
