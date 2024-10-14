@@ -1,69 +1,40 @@
 // Import images
 import Profile from "./assets/images/Profile/person.png";
-
-
 import reactjs from "./assets/images/Skills/react.png";
-
 import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/logo2.png";
 import services_logo3 from "./assets/images/Services/logo3.png";
-
 import project1 from "./assets/images/projects/img1.png";
 import project2 from "./assets/images/projects/img2.png";
 import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
-
-
-
 
 // Import icons from react-icons
 import { GrMail } from "react-icons/gr";
-import { MdArrowForward, MdCall } from "react-icons/md";
+import { MdArrowForward, MdCall, MdOutlinePermContactCalendar } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
 
 // Export content object
 export const content = {
   nav: [
-    {
-      link: "#home",
-      icon: TbSmartHome,
-    },
-    {
-      link: "#skills",
-      icon: BiUser,
-    },
-    {
-      link: "#services",
-      icon: RiServiceLine,
-    },
-    {
-      link: "#projects",
-      icon: RiProjectorLine,
-    },
-    {
-      link: "#contact",
-      icon: MdOutlinePermContactCalendar,
-    },
+    { link: "#home", icon: TbSmartHome },
+    { link: "#skills", icon: BiUser },
+    { link: "#services", icon: RiServiceLine },
+    { link: "#projects", icon: RiProjectorLine },
+    { link: "#contact", icon: MdOutlinePermContactCalendar },
   ],
   profile: {
     title: "Développeuse Front-End",
-    firstName: "",
-    lastName: "",
+    firstName: "Sophie",
+    lastName: "Labyt",
     btnText: "Contactez Moi",
     image: Profile,
+    intro: "Passionnée par le développement web et l'expérience utilisateur, je crée des applications interactives et esthétiques. Mon objectif est d'allier créativité et technologie pour offrir des solutions adaptées aux besoins des utilisateurs.",
     profile: [
-      {
-        count: "?",
-        text: "Lorem ipsum",
-      },
-      {
-        count: "?",
-        text: "Lorem ipsum",
-      },
+      { count: "?", text: "Lorem ipsum" },
+      { count: "?", text: "Lorem ipsum" },
     ],
   },
   skills: {
@@ -75,10 +46,7 @@ export const content = {
         tools: [
           "HTML",
           "CSS",
-          {
-            name: "React",
-            image: reactjs,
-          },
+          { name: "React", image: reactjs },
           "JavaScript",
           "NodeJs",
           "Express",
@@ -121,7 +89,7 @@ export const content = {
       },
       {
         title: "Stratégie SEO",
-        para: "En publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document relying on meaning.", // Correction de la phrase
+        para: "Optimisation pour les moteurs de recherche afin d'améliorer la visibilité des sites web.",
         logo: services_logo3,
       },
     ],
@@ -135,7 +103,6 @@ export const content = {
           image: project1,
           type: "application",
         },
-
       ],
     },
     {
@@ -146,7 +113,6 @@ export const content = {
           image: project3,
           type: "ecommerce",
         },
-      
       ],
     },
     {
@@ -157,16 +123,15 @@ export const content = {
           image: project3,
           type: "ecommerce",
         },
-      
       ],
     },
   ],
-  Testimonials: { 
+  Testimonials: {
     title: "Témoignages",
     subtitle: "MES AVIS CLIENTS",
     testimonials_content: [
       {
-        review: "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.”", // Correction de la phrase
+        review: "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate.”",
         name: "JOHN DOE",
       },
       {
@@ -185,11 +150,11 @@ export const content = {
   },
   Contactme: {
     title: "Contactez moi",
-    para: "lorem ipsum.", 
+    para: "Je suis disponible pour des projets freelance ou des opportunités d'emploi.",
     btnText: "Contactez moi",
   },
   Contact: {
-    title: "Contactez Moi", 
+    title: "Contactez Moi",
     subtitle: "ENTRER EN CONTACT",
     social_media: [
       {
@@ -200,9 +165,8 @@ export const content = {
       {
         text: "0670398936",
         icon: MdCall,
-        link: "/",
+        link: "tel:+33670398936",
       },
-      
     ],
   },
   Footer: {

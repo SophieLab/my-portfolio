@@ -2,30 +2,32 @@ import { createElement, useRef } from "react";
 import { content } from "../Content";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import React from "react";
 
 const Contact = () => {
   const { Contact } = content;
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
   // Sending Email
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-      'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
+        'YOUR_SERVICE_ID', 
+        'YOUR_TEMPLATE_ID', 
+        form.current!,
+        'YOUR_PUBLIC_KEY'
       )
       .then(
         (result) => {
           console.log(result.text);
-          // Clear all input field values
-          form.current.reset();
-          // Success toast message
-          toast.success("Email send Successfully");
+          form.current?.reset();
+          toast.success("Email sent successfully");
         },
         (error) => {
           console.log(error.text);
-          toast.error(error.text);
+          toast.error("Failed to send email. Please try again.");
         }
       );
   };
@@ -71,8 +73,8 @@ const Contact = () => {
               required
             ></textarea>
             <button
-              className="btn self-start
-            bg-white text-dark_primary"
+              type="submit"
+              className="btn self-start bg-white text-dark_primary"
             >
               Submit
             </button>
@@ -86,7 +88,12 @@ const Contact = () => {
                 className="flex items-center gap-2"
               >
                 <h4 className="text-white">{createElement(content.icon)}</h4>
-                <a className="font-Poppins" href={content.link} target="_blank">
+                <a
+                  className="font-Poppins"
+                  href={content.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {content.text}
                 </a>
               </div>

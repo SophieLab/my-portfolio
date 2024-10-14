@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Vite configuration for a React application
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: 'localhost', // Empêche l'affichage de l'IP réseau
-    port: 3000, // Le port que vous souhaitez utiliser
-    strictPort: true, // Assure que le port soit utilisé, pas d'autres ports
+    host: 'localhost', // Use localhost to avoid exposing the network IP
+    port: 3000,        // Specify the port to run the development server
+    strictPort: true,  // Ensure that Vite uses the specified port, failing if it's unavailable
+    open: true,        // Optional: Automatically open the browser when the server starts
   }
 });

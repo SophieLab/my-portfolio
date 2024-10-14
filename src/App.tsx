@@ -1,9 +1,10 @@
 // import components
+import React from "react";
 import Profile from "./components/Profile";
 import Navbar from "./Layouts/Navbar";
 import Skills from "./components/Skills";
 import Service from "./components/Services";
-import Projects from "./components/Projects";
+// import ProjectRoot from "./components/Projects/ProjectRoot";
 import Testimonials from "./components/Testimonials";
 import Contactme from "./components/Contactme";
 import Contact from "./components/Contact";
@@ -26,7 +27,7 @@ const App = () => {
 <Profile />     
  <Skills />
       <Service />
-      <Projects />
+      {/* <ProjectRoot /> */}
       <Testimonials />
 <Contactme />
       <Contact />
