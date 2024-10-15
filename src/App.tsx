@@ -1,35 +1,36 @@
-// import components
-import React from "react";
+// Importation des composants
+import React, { useEffect } from "react";
 import Profile from "./components/Profile";
 import Navbar from "./Layouts/Navbar";
 import Skills from "./components/Skills";
 import Service from "./components/Services";
-// import ProjectRoot from "./components/Projects/ProjectRoot";
+// import ProjectRoot from "./components/Projects/ProjectRoot"; // Décommenter si nécessaire
 import Testimonials from "./components/Testimonials";
 import Contactme from "./components/Contactme";
 import Contact from "./components/Contact";
-import { useEffect } from "react";
-// Animation package
+// Importation du package d'animation AOS
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const App = () => {
+  // Initialisation d'AOS lors du premier rendu
   useEffect(() => {
     Aos.init({
-      duration: 1800,
-      offset: 100,
-      disable: "mobile",
+      duration: 1800, // Durée de l'animation
+      offset: 100,    // Décalage avant le début de l'animation
+      disable: "mobile", // Désactiver sur mobile si nécessaire
     });
   }, []);
+
   return (
-    <div className="">
+    <div>
       <Navbar />
-<Profile />     
- <Skills />
+      <Profile />     
+      <Skills />
       <Service />
-      {/* <ProjectRoot /> */}
+      {/* <ProjectRoot /> Décommenter si nécessaire */}
       <Testimonials />
-<Contactme />
+      <Contactme />
       <Contact />
       <footer className="p-3 text-center">
         <h6 className="mb-3">Sophie Labyt</h6>
