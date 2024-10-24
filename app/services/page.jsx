@@ -2,11 +2,12 @@
 
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Développement front-end",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
     href: "",
@@ -20,7 +21,7 @@ const services = [
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Communication",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
     href: "",
@@ -33,8 +34,6 @@ const services = [
     href: "",
   },
 ];
-
-import { motion } from "framer-motion";
 
 const Services = () => {
   return (
@@ -54,11 +53,17 @@ const Services = () => {
                 key={index}
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
-                {/* top */}
-                <div className="w-full flex justify-between items-center">
+                {/* Flex container for aligning on a single line */}
+                <div className="flex items-center justify-between w-full">
+                  {/* Number */}
                   <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
+                  {/* Title */}
+                  <h2 className="text-[42px] font-bold text-dark group-hover:text-accent transition-all duration-500">
+                    {service.title}
+                  </h2>
+                  {/* Icon Button */}
                   <Link
                     href={service.href}
                     className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
@@ -66,13 +71,9 @@ const Services = () => {
                     <BsArrowDownRight className="text-primary text-3xl" />
                   </Link>
                 </div>
-                {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
-                  {service.title}
-                </h2>
-                {/* description */}
-                <p className="text-white/60">{service.description}</p>
-                {/* border */}
+                {/* Description */}
+                <p className="text-dark w-full">{service.description}</p>
+                {/* Divider */}
                 <div className="border-b border-white/20 w-full"></div>
               </div>
             );

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-black leading-loose;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -18,7 +18,6 @@
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;
   }
-
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
