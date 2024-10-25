@@ -19,7 +19,7 @@ const Stats = () => {
               <p className="text-lg xl:text-xl font-bold whitespace-nowrap shadow-md">
                 {item.text}
               </p>
-              {/* Étoiles scintillantes */}
+          
               <div className="absolute inset-0 rounded-full border-2 border-transparent animate-sparkle"></div>
             </div>
           ))}

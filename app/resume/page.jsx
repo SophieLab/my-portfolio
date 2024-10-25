@@ -54,12 +54,10 @@ const education = {
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
-    { institution: "OpenClassrooms", degree: "Full Stack Web Development Bootcamp", duration: "2023" },
-    { institution: "Codecademy", degree: "Front-end Track", duration: "2022" },
-    { institution: "Online Course", degree: "Programming Course", duration: "2020 - 2021" },
-    { institution: "Tech Institute", degree: "Certified Web Developer", duration: "2019" },
-    { institution: "Design School", degree: "Diploma in Graphic Design", duration: "2016 - 2018" },
-    { institution: "Community College", degree: "Associate Degree in Computer Science", duration: "2014 - 2016" },
+    { institution: "OpenClassrooms", degree: "Formation Développeur Web", duration: "202-2024" },
+    { institution: "Digital Campus", degree: "Master 2 Expert en Stratégie Digitale, Spécialité UX Design", duration: "2020-2022" },
+    { institution: "Université Toulouse Jean-Jaurès", degree: "Licence 3 Information-Communciation", duration: "2019-2020" },
+    { institution: "IUT Toulouse Paul Sabatier", degree: "Dut Information-Communication", duration: "2017-2019" },
   ],
 };
 
@@ -96,7 +94,8 @@ const Resume = () => {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="Certifications">Certifications</TabsTrigger>
+          
           </TabsList>
 
           {/* Content */}
@@ -132,7 +131,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                  <p className="max-w-[600px] text-white mx-auto xl:mx-0">{skills.description}</p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => (
@@ -164,19 +163,19 @@ const ContentSection = ({ title, description, children }) => (
 
 // Experience Item Component
 const ExperienceItem = ({ item }) => (
-  <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+  <li className="bg-gray-400 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
     <span className="text-accent">{item.duration}</span>
     <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
     <div className="flex items-center gap-3">
       <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-      <p className="text-white/60">{item.company}</p>
+      <p className="text-white">{item.company}</p>
     </div>
   </li>
 );
 
 // Education Item Component
 const EducationItem = ({ item }) => (
-  <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+  <li className="bg-gray-400 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
     <span className="text-accent">{item.duration}</span>
     <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
     <div className="flex items-center gap-3">

@@ -1,58 +1,58 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"], // Active le mode sombre basé sur la classe
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,jsx}", // Scanne tous les fichiers dans le dossier pages
-    "./components/**/*.{js,jsx}", // Scanne les composants
-    "./app/**/*.{js,jsx}", // Scanne les fichiers dans le dossier app
-    "./src/**/*.{js,jsx}", // Scanne le dossier src
-    "./styles/**/*.{css}" // Scanne aussi les fichiers CSS pour appliquer les classes Tailwind
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+    "./styles/**/*.{css}"
   ],
-  prefix: "", // Pas de préfixe personnalisé
+  prefix: "",
   theme: {
     container: {
-      center: true, // Centre les containers
-      padding: "15px", // Ajoute du padding dans les containers
+      center: true,
+      padding: "15px",
     },
     screens: {
-      sm: "640px", // Breakpoint pour petit écran
-      md: "768px", // Breakpoint pour écran moyen
-      lg: "960px", // Breakpoint pour grand écran
-      xl: "1200px", // Breakpoint pour très grand écran
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1200px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)", // Utilise la police définie dans ta variable CSS
+      primary: "var(--font-Poppins)",
     },
     extend: {
       colors: {
-        primary: '#fff', // Couleur principale blanche
+        primary: '#fff',
         accent: {
-          DEFAULT: "#2c2cf7", // Couleur d'accent par défaut
-          hover: "#1a1aad",   // Couleur d'accent au survol
+          DEFAULT: "#2c2cf7",
+          hover: "#1a1aad",
         },
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" }, // Commence à 0px de hauteur
-          to: { height: "var(--radix-accordion-content-height)" }, // Se déploie à la hauteur de contenu
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" }, // Part de la hauteur de contenu
-          to: { height: "0" }, // Se referme à 0px
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
         typing: {
-          '0%': { width: '0%' }, // Commence avec une largeur de 0%
-          '100%': { width: '100%' }, // Se termine avec une largeur de 100%
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
         },
         blink: {
-          '0%, 100%': { borderColor: 'transparent' }, // Border transparente au début et à la fin
-          '50%': { borderColor: 'black' }, // Border visible au milieu
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'black' },
         },
         zoomIn: {
-          '0%': { transform: 'scale(0.5)', opacity: '0' }, // Démarre à 50% de taille et transparent
-          '100%': { transform: 'scale(1)', opacity: '1' }, // Se termine à 100% avec pleine opacité
+          '0%': { transform: 'scale(0.5)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
         },
-        sparkle: { // Animation scintillante pour les badges
+        sparkle: {
           '0%': { opacity: '0.5' },
           '50%': { opacity: '1' },
           '100%': { opacity: '0.5' },
@@ -63,16 +63,16 @@ module.exports = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out", // Animation pour ouvrir l'accordéon
-        "accordion-up": "accordion-up 0.2s ease-out", // Animation pour fermer l'accordéon
-        typing: "typing 3.5s steps(40, end), blink 0.75s step-end infinite", // Animation pour effet de texte tapé
-        zoomIn: "zoomIn 0.5s ease-out", // Animation pour un zoom progressif
-        sparkle: "sparkle 1.5s infinite alternate", // Animation pour un effet scintillant
-        fadeIn: "fadeIn 0.5s ease-in-out", // Animation pour un effet d'apparition
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        typing: "typing 3.5s steps(40, end), blink 0.75s step-end infinite",
+        zoomIn: "zoomIn 0.5s ease-out",
+        sparkle: "sparkle 1.5s infinite alternate",
+        fadeIn: "fadeIn 0.5s ease-in-out",
       },
     },
   },
   plugins: [
-    require("tailwindcss-animate"), // Plugin pour utiliser les animations Tailwind
+    require("tailwindcss-animate"),
   ],
 };
