@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import {
   Select,
   SelectContent,
@@ -13,25 +13,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const info = [
   {
     icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "(+40) 321 654 876",
+    title: "Mobile",
+    description: "0670398936",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
-  },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Address",
-    description: "Code Corner, Tech Town 13579",
+    description: "labytsophie@gmail.com",
   },
 ];
 
@@ -44,15 +38,25 @@ const Contact = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }}}
-      className="py-6"
+      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
+      className="relative py-6" 
     >
-      <div className="container mx-auto">
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/background.png"
+          priority
+          quality={100}
+          fill
+          alt="Background illustrating the contact section"
+          className="object-cover"
+        />
+      </div>
+      <div className="container mx-auto relative z-10">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Formulaire */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let's work together</h3>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c]/80 rounded-xl">
+              <h3 className="text-4xl text-accent">Travaillons ensemble</h3>
               <p className="text-white/60">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
                 nihil sapiente pariatur id totam.
@@ -102,7 +106,7 @@ const Contact = () => {
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => (
                 <li key={index} className="flex items-center gap-6">
-                  <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                  <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-white rounded-md flex items-center justify-center">
                     <div className="text-[28px]">{item.icon}</div>
                   </div>
                   <div className="flex-1">

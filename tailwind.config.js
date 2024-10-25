@@ -48,11 +48,27 @@ module.exports = {
           '0%, 100%': { borderColor: 'transparent' }, // Border transparente au début et à la fin
           '50%': { borderColor: 'black' }, // Border visible au milieu
         },
+        zoomIn: {
+          '0%': { transform: 'scale(0.5)', opacity: '0' }, // Démarre à 50% de taille et transparent
+          '100%': { transform: 'scale(1)', opacity: '1' }, // Se termine à 100% avec pleine opacité
+        },
+        sparkle: { // Animation scintillante pour les badges
+          '0%': { opacity: '0.5' },
+          '50%': { opacity: '1' },
+          '100%': { opacity: '0.5' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out", // Animation pour ouvrir l'accordéon
         "accordion-up": "accordion-up 0.2s ease-out", // Animation pour fermer l'accordéon
         typing: "typing 3.5s steps(40, end), blink 0.75s step-end infinite", // Animation pour effet de texte tapé
+        zoomIn: "zoomIn 0.5s ease-out", // Animation pour un zoom progressif
+        sparkle: "sparkle 1.5s infinite alternate", // Animation pour un effet scintillant
+        fadeIn: "fadeIn 0.5s ease-in-out", // Animation pour un effet d'apparition
       },
     },
   },

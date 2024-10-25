@@ -9,31 +9,27 @@ import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <section className="relative h-screen flex items-center"> {/* Flex to center content vertically */}
+    <section className="relative h-screen flex items-center"> 
       <div className="absolute inset-0">
         <Image
-          src="/assets/background.png" // Path to your background image
+          src="/assets/background4.png"
           priority
           quality={100}
           fill
-          alt="Background illustrating the home section" // Descriptive alt text
-          className="object-cover" // Ensures the image covers the section
+          alt="Background illustrating the home section"
+          className="object-cover"
         />
       </div>
-      <div className="container h-full relative z-10 flex flex-col justify-between"> {/* Flex container */}
-        <div className="flex flex-col xl:flex-row items-center justify-between h-full px-4"> {/* Adjust padding */}
-          {/* text */}
-          <div className="text-center xl:text-left xl:w-1/2"> {/* Set width for responsive design */}
+      <div className="container h-full relative z-10 flex flex-col justify-between">
+        <div className="flex flex-col xl:flex-row items-center justify-between h-full px-4">
+          <div className="text-center xl:text-left xl:w-1/2">
             <span className="text-xl">Développeuse Front-end et UI/UX Designer</span>
-            <h1 className="h1 mb-4"> {/* Adjusted margin */}
+            <h1 className="h1 mb-4"> 
               <span className="text-white">Sophie Labyt</span>
             </h1>
-            <p className="max-w-[500px] mb-6 text-white/80"> {/* Adjusted margin */}
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
-            </p>
-            {/* btn and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-4"> {/* Adjusted gap */}
+            <p className="max-w-[500px] mb-6 text-white/80"> 
+            Créatrice d’expériences numériques uniques, j’allie technique et design pour transformer des idées en interfaces élégantes et intuitives.            </p>
+            <div className="flex flex-col xl:flex-row items-center gap-4">
               <Button
                 variant="outline"
                 size="lg"
@@ -51,7 +47,7 @@ const Home = () => {
             </div>
           </div>
           {/* photo */}
-          <div className="xl:w-1/2 flex justify-center mb-4 xl:mb-0"> {/* Set width for responsive design */}
+          <div className="xl:w-1/2 flex justify-center mb-4 xl:mb-0"> 
             <Photo />
           </div>
         </div>

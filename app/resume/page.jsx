@@ -21,17 +21,13 @@ import { motion } from "framer-motion";
 
 // About data
 const about = {
-  title: "About me",
+  title: "À propos",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   info: [
-    { fieldName: "Name", fieldValue: "Luke Coleman" },
-    { fieldName: "Phone", fieldValue: "(+40) 321 654 678" },
-    { fieldName: "Experience", fieldValue: "12+ Years" },
-    { fieldName: "Skype", fieldValue: "luke.01" },
-    { fieldName: "Nationality", fieldValue: "American" },
-    { fieldName: "Email", fieldValue: "luke.01@gmail.com" },
-    { fieldName: "Freelance", fieldValue: "Available" },
+    { fieldName: "Name", fieldValue: "Sophie Labyt" },
+    { fieldName: "Phone", fieldValue: "0670398936" },
+    { fieldName: "Email", fieldValue: "labytsophie@gmail.com" },
     { fieldName: "Languages", fieldValue: "English, Spanish" },
   ],
 };
@@ -39,16 +35,15 @@ const about = {
 // Experience data
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My experience",
+  title: "Mes expériences",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
-    { company: "Tech Solutions Inc.", position: "Full Stack Developer", duration: "2022 - Present" },
-    { company: "Web Design Studio", position: "Front-End Developer Intern", duration: "Summer 2021" },
-    { company: "E-commerce Startup", position: "Freelance Web Developer", duration: "2020 - 2021" },
-    { company: "Tech Academy", position: "Teaching Assistant", duration: "2019 - 2020" },
-    { company: "Digital Agency", position: "UI/UX Designer", duration: "2018 - 2019" },
-    { company: "Software Development Firm", position: "Junior Developer", duration: "2017 - 2018" },
+    { company: "CHU de Toulouse.", position: "Développeuse Front-End & UI/UX Designer", duration: "2023 - Present" },
+    { company: "Kallisto", position: "Chargée de webdesign et marketing digital", duration: "2020 - 2022" },
+    { company: "Rectorat de Toulouse", position: "Chargée des archives electroniques", duration: " Avr 2019 - Ju 2019 " },
+    { company: "LMC", position: "Assistante en communication digitale et SEO", duration: "Juin 2018" },
+    { company: "M.D.S.P", position: "Webmaster", duration: "Oct 2017" },
   ],
 };
 
@@ -59,7 +54,7 @@ const education = {
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
-    { institution: "Online Course Platform", degree: "Full Stack Web Development Bootcamp", duration: "2023" },
+    { institution: "OpenClassrooms", degree: "Full Stack Web Development Bootcamp", duration: "2023" },
     { institution: "Codecademy", degree: "Front-end Track", duration: "2022" },
     { institution: "Online Course", degree: "Programming Course", duration: "2020 - 2021" },
     { institution: "Tech Institute", degree: "Certified Web Developer", duration: "2019" },
