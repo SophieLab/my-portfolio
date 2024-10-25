@@ -43,7 +43,7 @@ const Contact = () => {
     >
       <div className="absolute inset-0">
         <Image
-          src="/assets/background.png"
+          src="/assets/background.webp"
           priority
           quality={100}
           fill

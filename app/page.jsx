@@ -12,7 +12,7 @@ const Home = () => {
     <section className="relative h-screen flex items-center"> 
       <div className="absolute inset-0">
         <Image
-          src="/assets/background4.png"
+          src="/assets/background4.webp"
           priority
           quality={100}
           fill
@@ -27,9 +27,8 @@ const Home = () => {
             <h1 className="h1 mb-2"> 
               <span className="text-white">Sophie Labyt</span>
             </h1>
-            <p className="max-w-[500px] mb-4 text-white/80"> 
-              Créatrice d’expériences numériques uniques, j’allie technique et design pour transformer des idées en interfaces élégantes et intuitives.
-            </p>
+            <p className="max-w-[500px] mb-4 text-white/80">
+              Créatrice d’expériences numériques, je transforme vos projets en interfaces intuitives et attrayantes.            </p>
             <div className="flex flex-col xl:flex-row items-center gap-2">
               <Button
                 variant="outline"

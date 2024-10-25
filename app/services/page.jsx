@@ -54,7 +54,7 @@ const Services = () => {
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
                 {/* Flex container for aligning on a single line */}
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between w-full ">
                   {/* Number */}
                   <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
@@ -68,7 +68,7 @@ const Services = () => {
                     href={service.href}
                     className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-primary text-3xl" />
+                    <BsArrowDownRight className="text-w text-3xl" />
                   </Link>
                 </div>
                 {/* Description */}
