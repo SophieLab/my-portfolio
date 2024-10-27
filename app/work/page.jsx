@@ -1,6 +1,6 @@
 "use client"; // Indique que ce composant utilise des fonctionnalités spécifiques à Next.js
 
-import { motion } from "framer-motion"; // Pour les animations
+import { motion } from "framer-motion";
 import React, { useState } from "react"; // Importation des hooks React
 import { Swiper, SwiperSlide } from "swiper/react"; // Importation de Swiper pour le carrousel
 import "swiper/css"; // Importation des styles de Swiper
