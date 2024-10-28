@@ -16,9 +16,21 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 1px #ffffff; /* Outline for the text */
   }
   .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #00ff99; /* Outline color on hover */
+    transition: -webkit-text-stroke 0.3s ease; /* Smooth transition for the hover effect */
+  }
+
+  /* Custom utility for a primary button style */
+  .btn-primary {
+    @apply bg-accent text-white py-2 px-4 rounded-full shadow-md transition-all duration-300;
+  }
+
+  /* Custom hover effect for buttons */
+  .btn-primary:hover {
+    @apply bg-accent hover:bg-opacity-80; /* Slightly reduce opacity on hover */
+    transform: scale(1.05); /* Scale effect on hover */
   }
 }
