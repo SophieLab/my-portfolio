@@ -3,14 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '@/components/SideBar';
 import ProjectSlider from '@/components/ProjectsSlider';
-import projects from './projects'; // Assurez-vous que le chemin est correct
+import projects from './projects';
 
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState('frontend');
   const [projectsList, setProjectsList] = useState([]);
 
   useEffect(() => {
-    // Chargement des projets de la catégorie sélectionnée
     setProjectsList(projects[selectedCategory] || []);
   }, [selectedCategory]);
 
@@ -19,12 +18,16 @@ const Page = () => {
   };
 
   return (
-    <div className="work-page">
-      <Sidebar 
-        categories={['frontend', 'backend', 'uiux']} 
-        onSelectCategory={handleSelectCategory} 
+    <div className="work-page flex">
+      {/* Barre latérale pour la sélection de catégorie */}
+      <Sidebar
+        categories={['frontend', 'backend', 'uiux']}
+        onSelectCategory={handleSelectCategory}
+        className="w-1/4"
       />
-      <div className="projects-container">
+
+      {/* Conteneur des projets */}
+      <div className="projects-container flex-grow flex items-center justify-center">
         {projectsList.length > 0 ? (
           <ProjectSlider projects={projectsList} />
         ) : (

@@ -25,6 +25,10 @@ const ProjectSlider = ({ projects }) => {
         <div className="project-text">
           <h2 className="text-xl font-bold">{currentProject.title}</h2>
           <p className="mt-2 text-gray-700">{currentProject.description}</p>
+          
+          {/* Displaying context and realization */}
+          <p className="mt-2 text-gray-600 italic"><strong>Contexte:</strong> {currentProject.contexte}</p>
+          <p className="mt-2 text-gray-600 italic"><strong>Réalisation:</strong> {currentProject.realisation}</p>
 
           {/* Displaying technology icons */}
           <div className="stack mt-2 flex">

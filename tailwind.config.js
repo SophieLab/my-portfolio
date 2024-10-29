@@ -8,22 +8,11 @@ module.exports = {
     "./src/**/*.{js,jsx}",
     "./styles/**/*.{css}",
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "15px",
-    },
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "960px",
-      xl: "1200px",
-    },
-    fontFamily: {
-      primary: "var(--font-Poppins)",
-    },
     extend: {
+      fontFamily: {
+        primary: ["Poppins", "sans-serif"], // Assurez-vous que le nom de la police est correct
+      },
       colors: {
         primary: '#fff',
         accent: {
@@ -32,12 +21,13 @@ module.exports = {
         },
       },
       animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        float: 'float 3s ease-in-out infinite',
+        'float-delay': 'float 3s ease-in-out infinite 1.5s',
       },
       keyframes: {
-        'infinite-scroll': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
     },

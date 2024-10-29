@@ -6,31 +6,52 @@
   body {
     @apply font-primary bg-primary text-black leading-loose;
   }
+
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }
+
   .h2 {
     @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
   }
+
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
+
   .text-outline {
-    -webkit-text-stroke: 1px #ffffff; /* Outline for the text */
-  }
-  .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99; /* Outline color on hover */
-    transition: -webkit-text-stroke 0.3s ease; /* Smooth transition for the hover effect */
+    -webkit-text-stroke: 1px #ffffff;
   }
 
-  /* Custom utility for a primary button style */
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+    transition: -webkit-text-stroke 0.3s ease;
+  }
+
   .btn-primary {
     @apply bg-accent text-white py-2 px-4 rounded-full shadow-md transition-all duration-300;
   }
 
-  /* Custom hover effect for buttons */
   .btn-primary:hover {
-    @apply bg-accent hover:bg-opacity-80; /* Slightly reduce opacity on hover */
-    transform: scale(1.05); /* Scale effect on hover */
+    @apply bg-accent bg-opacity-80;
+    transform: scale(1.05);
+  }
+
+  /* Animation for floating icons */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .floating-icon {
+    animation: float 3s ease-in-out infinite; /* Animation de flottement */
+    position: absolute; /* Positionnement absolu pour le flottement */
   }
 }

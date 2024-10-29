@@ -4,9 +4,9 @@ import React from "react";
 
 const stats = [
   { text: "Développement Front-End" },
-  { text: "UI/UX Design" },
+  { text: "UI Design" },
+  { text: "User Experience" },
   { text: "SEO" },
-  { text: "Communication" },
 ];
 
 const Stats = () => {

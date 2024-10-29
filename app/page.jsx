@@ -6,10 +6,12 @@ import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from '@/components/Stats';
-
+import FloatingIcons from '@/components/FloatingIcons';
 const Home = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
+      
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/assets/background4.webp"
@@ -20,9 +22,13 @@ const Home = () => {
           className="object-cover"
         />
       </div>
+      
+      {/* Content Container */}
       <div className="container relative z-10 flex flex-col items-center h-full px-4">
+        
         <div className="flex flex-col xl:flex-row justify-between items-stretch w-full mb-4">
-          {/* Left section: Text */}
+          
+          {/* Left Section: Text and Introduction */}
           <div className="xl:w-1/2 flex flex-col justify-center mb-4 xl:mb-0">
             <span className="text-xl">Développeuse Front-end et UI/UX Designer</span>
             <h1 className="h1 mb-2"> 
@@ -43,19 +49,20 @@ const Home = () => {
               <div>
                 <Social
                   containerStyles="flex gap-2"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary transition-colors duration-300" // Effet de remplissage au survol
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary transition-colors duration-300"
                 />
               </div>
             </div>
           </div>
 
-          {/* Right section: Photo */}
-          <div className="xl:w-1/2 flex justify-center mb-4 xl:mb-0">
+          {/* Right Section: Photo with Floating Icons */}
+          <div className="xl:w-1/2 flex justify-center mb-4 xl:mb-0 relative">
             <Photo />
+            <FloatingIcons/>
           </div>
         </div>
 
-        {/* Stats - directly below the text and photo section */}
+        {/* Stats Section */}
         <div className="flex w-full">
           <Stats />
         </div>
