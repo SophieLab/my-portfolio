@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import Sidebar from '@/components/SideBar';
+import Sidebar from '@/components/Sidebar'; // Corrected Sidebar import
 import ProjectSlider from '@/components/ProjectsSlider';
 import projects from './projects';
 
-const Page = () => {
+const WorkPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('frontend');
   const [projectsList, setProjectsList] = useState([]);
 
@@ -18,21 +18,22 @@ const Page = () => {
   };
 
   return (
-    <div className="work-page flex">
+    <div className="work-page flex flex-col md:flex-row">
       <Sidebar
         categories={['frontend', 'backend', 'uiux']}
         onSelectCategory={handleSelectCategory}
-        className="w-1/4"
+        className="w-full md:w-1/4 mb-4 md:mb-0"
       />
-      <div className="projects-container flex-grow flex items-center justify-center">
+      <div className="projects-container flex-grow flex flex-col items-center md:justify-center">
         {projectsList.length > 0 ? (
           <ProjectSlider projects={projectsList} />
         ) : (
-          <p>Aucun projet disponible pour cette catégorie.</p>
+          <p className="text-center">Aucun projet disponible pour cette catégorie.</p>
         )}
       </div>
     </div>
   );
 };
 
-export default Page;
+// Change export statement to match the component name
+export default WorkPage;

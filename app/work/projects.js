@@ -8,58 +8,56 @@ const projects = {
     {
       num: "01",
       title: "Nina Carducci",
-      contexte: "Optimisation SEO pour le site de la photograhe Nina Carducci",
-      realisation: "Dans ce projet, j'ai mené un audit complet pour optimiser les performances du site de la photographe Nina Carducci. En utilisant des outils web tels que WAVE, Lighthouse et headingsMap, j'ai amélioré la structure et optimisé le chargement pour une meilleure vitesse d'affichage des images. En réponse aux besoins du client, j'ai également résolu deux problèmes techniques qui affectaient le bon fonctionnement du site. Enfin, dans une démarche d'optimisation continue, j'ai travaillé sur les balises meta pour renforcer le référencement et accroître la visibilité de la photographe en ligne.",
-      icons: [<FaHtml5 />, <FaCss3Alt />, <FaJsSquare />,<AiFillGithub />, <TbSeo /> ],
+      contexte: "Optimisation SEO",
+      realisation: "Audit complet du site de la photographe Nina Carducci pour optimiser ses performances. En utilisant WAVE, Lighthouse et headingsMap, j’ai amélioré la structure et accéléré le chargement des images. J’ai également résolu des problèmes techniques affectant la navigation et optimisé les balises meta pour renforcer le référencement et accroître la visibilité en ligne.",
+      icons: [<FaHtml5 />, <FaCss3Alt />, <FaJsSquare />, <TbSeo />],
       image: "/assets/work/projet1.png",
       live: "",
-      github: ""  
+      github: "https://github.com/SophieLab/Nina-Carducci-Dev"
     },
     {
       num: "02",
-      title: "Gaelo Flow",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      stack: ["React", "Tailwind CSS", "Nest.js", "TypeScript", "Docker"],
+      title: "Sophie Bluel - Portfolio d'architecte",
+      contexte: "Créez une page web dynamique avec JavaScript",
+      realisation: "Dans ce projet chez ArchiWebos, j'ai contribué au développement du portfolio d'une architecte d'intérieur en renforçant l'équipe front-end. Mes missions principales consistaient à intégrer la page de présentation des travaux à partir d'un design Figma, à créer une page de connexion sécurisée pour l’administrateur, et à développer une modale permettant l'upload de nouveaux médias pour une gestion simplifiée du contenu.",
       icons: [
-        <FaReact />, 
-        <SiTailwindcss />, 
-        <SiNestjs />, 
-        <SiTypescript />, 
-        <SiDocker />
+        <FaHtml5 />, 
+        <FaCss3Alt />, 
+        // Additional icons can be added here
       ],
       image: "/assets/work/projet2.png",
       live: "",
-      github: ""
+      github: "https://github.com/SophieLab/Portfolio-architecte-sophie-bluel"
     },
     {
       num: "03",
-      title: "Project 3",
-      description: "Création de la page d'accueil d'une agence de voyage",
+      title: "Booki",
+      contexte: "Création de la page d'accueil d'une agence de voyage",
+      realisation: "Projet réalisé dans le cadre de mon alternance chez Booki. En tant que développeur web, j'ai intégré l'interface du site de réservation en HTML et CSS en suivant les maquettes desktop, tablette, et mobile créées sur Figma. En étroite coordination avec la CTO et l'UI designer, j'ai complété le code HTML et CSS fourni en respectant les spécifications techniques et les contraintes d'ergonomie.",
       stack: ["Vue.js", "Bootstrap"],
       icons: [<FaVuejs />, <FaBootstrap />],
-      image: "/assets/work/thumb3.png",
+      image: "/assets/work/projet3.png",
       live: "",
-      github: ""
+      github: "https://github.com/SophieLab/booki-starter-code"
     },
     {
       num: "04",
-      title: "Project 4",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      stack: ["Angular", "Sass"],
+      title: "Kasa",
+      contexte: "Création d'une application web de location immobilière",
+      realisation: "Projet réalisé en freelance pour Kasa, entreprise de location d'appartements entre particuliers. Dans le cadre d'une refonte complète du site, j'ai développé l'interface utilisateur en React, en suivant les maquettes Figma pour une expérience responsive et intuitive. Le projet a impliqué la création de composants React, l'intégration de routes avec React Router, et la mise en place de galeries dynamiques et de menus déroulants (Collapse). Sans back-end disponible, j'ai utilisé un fichier JSON pour les données et respecté les guidelines de Kasa pour un code maintenable et optimisé.",
       icons: [<FaAngular />, <FaSass />],
-      image: "/assets/work/thumb4.png",
+      image: "/assets/work/projet4.png",
       live: "",
-      github: ""
+      github: "https://github.com/SophieLab/kasa"
     },
     {
       num: "05",
-      title: "Project 5",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      stack: ["jQuery", "CSS Grid"],
-      icons: [<FaJquery />],
-      image: "/assets/work/thumb5.png",
+      title: "Gaelo Flow",
+      contexte: "Développement d'une application de gestion d'imageries médicales",
+      realisation: "", // Add a description if available
+      icons: [<FaAngular />, <FaSass />],
       live: "",
-      github: ""
+      github: "" // Add a GitHub link if available
     },
     {
       num: "06",
@@ -73,10 +71,62 @@ const projects = {
     }
   ],
   backend: [
-    // Backend projects...
+    {
+      num: "01",
+      title: "Mon vieux Grimoire",
+      contexte: "Développez le back-end d'un site de notation de livres",
+      realisation: "Projet réalisé en freelance pour le site de notation de livres Mon Vieux Grimoire, développé en collaboration avec Kévin, un développeur front-end. Ma mission consistait à créer l'API pour gérer l'ajout de nouveaux livres et leur notation, tout en intégrant des fonctionnalités d'optimisation des images pour respecter les bonnes pratiques du Green Code. J'ai suivi les spécifications techniques fournies par Kévin, et après avoir terminé le back-end, nous avons vérifié l'intégration avec le front-end avant de le présenter au client. Ce projet a renforcé mes compétences en développement back-end et en optimisation des ressources.",
+      icons: [<FaNodeJs />],
+      live: "",
+      github: "https://github.com/SophieLab/mon-vieux-grimoire"
+    }
   ],
   uiux: [
-    // UI/UX projects...
+    {
+      num: "01",
+      title: "Gaelo Flow",
+      contexte: "Développez le back-end d'un site de notation de livres",
+      realisation: "Projet réalisé en freelance pour le site de notation de livres Mon Vieux Grimoire, développé en collaboration avec Kévin, un développeur front-end. Ma mission consistait à créer l'API pour gérer l'ajout de nouveaux livres et leur notation, tout en intégrant des fonctionnalités d'optimisation des images pour respecter les bonnes pratiques du Green Code. J'ai suivi les spécifications techniques fournies par Kévin, et après avoir terminé le back-end, nous avons vérifié l'intégration avec le front-end avant de le présenter au client. Ce projet a renforcé mes compétences en développement back-end et en optimisation des ressources.",
+      icons: [<FaNodeJs />],
+      live: "",
+      github: "https://github.com/SophieLab/mon-vieux-grimoire"
+    },
+    {
+      num: "02",
+      title: "La maison des bibie's",
+      contexte: "Création des maquettes",
+      realisation: "Durant six mois, dans le cadre d'un projet d'étude en collaboration avec les porteurs de projet, j’ai pu intégrer le pôle ui/ux design où j'ai notamment participé à l'identité visuelle, travailler sur le design du site et à la réalisation des prototypages du site internet.",
+      icons: [<FaNodeJs />],
+      live: "",
+      github: "" // Add a GitHub link if available
+    },
+    {
+      num: "03",
+      title: "MADI",
+      contexte: "Créer un prototype de l'application et rendre cet assistant domestique rassurant pour l'utilisateur.",
+      realisation: "Création d'un prototypage dans le cadre d'un projet d'étude. J'ai effectué un prototypage adapté à un scénario utilisateur et à une charte graphique donnée pour une application nommée MADI, une intelligence artificielle couplée à l'implant Neuralink.",
+      icons: [<FaNodeJs />],
+      live: "",
+      github: "" // Add a GitHub link if available,
+    },
+    {
+      num: "03",
+      title: "DCO2",
+      contexte: "Créer un prototype de l'application et rendre cet assistant domestique rassurant pour l'utilisateur.",
+      realisation: "Création d'un prototypage dans le cadre d'un projet d'étude. J'ai effectué un prototypage adapté à un scénario utilisateur et à une charte graphique donnée pour une application nommée MADI, une intelligence artificielle couplée à l'implant Neuralink.",
+      icons: [<FaNodeJs />],
+      live: "",
+      github: "" // Add a GitHub link if available
+    },
+    {
+      num: "03",
+      title: "Nous Box",
+      contexte: "Créer un prototype de l'application et rendre cet assistant domestique rassurant pour l'utilisateur.",
+      realisation: "Création d'un prototypage dans le cadre d'un projet d'étude. J'ai effectué un prototypage adapté à un scénario utilisateur et à une charte graphique donnée pour une application nommée MADI, une intelligence artificielle couplée à l'implant Neuralink.",
+      icons: [<FaNodeJs />],
+      live: "",
+      github: "" // Add a GitHub link if available
+    }
   ]
 };
 

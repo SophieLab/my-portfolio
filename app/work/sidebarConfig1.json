@@ -1,0 +1,7 @@
+[
+    { "label": "Expérience", "value": "experience" },
+    { "label": "Éducation", "value": "education" },
+    { "label": "Compétences", "value": "skills" },
+    { "label": "À propos", "value": "about" }
+  ]
+  
