@@ -1,39 +1,50 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import Sidebar from '@/components/Sidebar'; // Corrected Sidebar import
+import Sidebar from '@/components/SideBar';
 import ProjectSlider from '@/components/ProjectsSlider';
 import projects from './projects';
 
-const WorkPage = () => {
+const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState('frontend');
   const [projectsList, setProjectsList] = useState([]);
 
   useEffect(() => {
+    // Met à jour la liste des projets en fonction de la catégorie sélectionnée
     setProjectsList(projects[selectedCategory] || []);
-  }, [selectedCategory]);
+  }, [selectedCategory]);4
 
   const handleSelectCategory = (category) => {
+    // Change la catégorie sélectionnée
     setSelectedCategory(category);
   };
 
   return (
-    <div className="work-page flex flex-col md:flex-row">
-      <Sidebar
-        categories={['frontend', 'backend', 'uiux']}
-        onSelectCategory={handleSelectCategory}
-        className="w-full md:w-1/4 mb-4 md:mb-0"
-      />
-      <div className="projects-container flex-grow flex flex-col items-center md:justify-center">
+    <div className="work-page flex min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/assets/background2.webp')" }}>
+      {/* Sidebar avec position fixe */}
+      <div className="fixed top-0 left-0 w-1/4 h-full z-10 p-4">
+        <Sidebar
+          config={[
+            { label: 'Frontend', value: 'frontend' },
+            { label: 'Backend', value: 'backend' },
+            { label: 'UI/UX', value: 'uiux' }
+          ]}
+          onSelectCategory={handleSelectCategory}
+        />
+      </div>
+
+      {/* Conteneur des projets, avec un léger espacement */}
+      <div className="flex-grow flex items-center justify-center p-12"> {/* Ajout de p-4 pour l'espacement */}
         {projectsList.length > 0 ? (
-          <ProjectSlider projects={projectsList} />
+          <div className="w-full max-w-full"> {/* Utilise toute la largeur sans padding supplémentaire */}
+            <ProjectSlider projects={projectsList} />
+          </div>
         ) : (
-          <p className="text-center">Aucun projet disponible pour cette catégorie.</p>
+          <p className="text-center text-white">Aucun projet disponible pour cette catégorie.</p>
         )}
       </div>
     </div>
   );
 };
 
-// Change export statement to match the component name
-export default WorkPage;
+export default Page;

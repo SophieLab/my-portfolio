@@ -23,7 +23,6 @@ const projects = {
       icons: [
         <FaHtml5 />, 
         <FaCss3Alt />, 
-        // Additional icons can be added here
       ],
       image: "/assets/work/projet2.png",
       live: "",
@@ -77,6 +76,7 @@ const projects = {
       contexte: "Développez le back-end d'un site de notation de livres",
       realisation: "Projet réalisé en freelance pour le site de notation de livres Mon Vieux Grimoire, développé en collaboration avec Kévin, un développeur front-end. Ma mission consistait à créer l'API pour gérer l'ajout de nouveaux livres et leur notation, tout en intégrant des fonctionnalités d'optimisation des images pour respecter les bonnes pratiques du Green Code. J'ai suivi les spécifications techniques fournies par Kévin, et après avoir terminé le back-end, nous avons vérifié l'intégration avec le front-end avant de le présenter au client. Ce projet a renforcé mes compétences en développement back-end et en optimisation des ressources.",
       icons: [<FaNodeJs />],
+      image: "/assets/work/thumb6.png",
       live: "",
       github: "https://github.com/SophieLab/mon-vieux-grimoire"
     }

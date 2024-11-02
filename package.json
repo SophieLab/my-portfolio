@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/core": "^7.13.4",
+    "@mantine/hooks": "^7.13.4",
+    "@preline/carousel": "^2.5.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-select": "^2.0.0",

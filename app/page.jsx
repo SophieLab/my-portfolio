@@ -7,6 +7,7 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from '@/components/Stats';
 import FloatingIcons from '@/components/FloatingIcons';
+
 const Home = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
@@ -38,14 +39,16 @@ const Home = () => {
               Créatrice d’expériences numériques, je transforme vos projets en interfaces intuitives et attrayantes.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-2">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Mon CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a href="/assets/Sophie_Labyt_CV.pdf" download className="no-underline">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Mon CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div>
                 <Social
                   containerStyles="flex gap-2"
