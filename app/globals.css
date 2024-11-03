@@ -20,21 +20,21 @@
   }
 
   .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 1px #ffffff; /* Contour blanc */
   }
 
   .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
-    transition: -webkit-text-stroke 0.3s ease;
+    -webkit-text-stroke: 1px #00ff99; /* Contour vert fluo lors du survol */
+    transition: -webkit-text-stroke 0.3s ease; /* Transition pour le changement de contour */
   }
 
   .btn-primary {
-    @apply bg-accent text-white py-2 px-4 rounded-full shadow-md transition-all duration-300;
+    @apply bg-accent text-white py-2 px-4 rounded-full shadow-md transition-all duration-300; /* Styles du bouton primaire */
   }
 
   .btn-primary:hover {
-    @apply bg-accent bg-opacity-80;
-    transform: scale(1.05);
+    @apply bg-accent bg-opacity-80; /* Changement d'opacité lors du survol */
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
   }
 
   /* Animation for floating icons */
@@ -43,10 +43,10 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-10px); /* Montée de l'icône */
     }
     100% {
-      transform: translateY(0);
+      transform: translateY(0); /* Retour à la position d'origine */
     }
   }
 
