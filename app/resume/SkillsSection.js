@@ -4,7 +4,7 @@ import resumeData from "./resumeData";
 
 const SkillsSection = () => (
   <div className="mb-8">
-    <h2 className="text-3xl font-medium text-white">{resumeData.cv.skills.title}</h2> {/* Titre agrandi et en blanc */}
+    <h2 className="text-3xl font-medium text-white mb-8" >{resumeData.cv.skills.title}</h2> {/* Titre agrandi et en blanc */}
     <p className="mb-4 text-gray-600">{resumeData.cv.skills.description}</p>
     <div className="grid grid-cols-1 gap-6">
       {/* Carte de développement web prenant toute la largeur */}

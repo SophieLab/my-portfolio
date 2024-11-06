@@ -10,7 +10,7 @@ import FloatingIcons from '@/components/FloatingIcons';
 
 const Home = () => {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative h-screen flex items-center overflow-hidden px-6 md:px-12 lg:px-16">
       
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -25,7 +25,7 @@ const Home = () => {
       </div>
       
       {/* Content Container */}
-      <div className="container relative z-10 flex flex-col items-center h-full px-4">
+      <div className="container relative z-10 flex flex-col items-center h-full">
         
         <div className="flex flex-col xl:flex-row justify-between items-stretch w-full mb-4">
           
@@ -61,7 +61,7 @@ const Home = () => {
           {/* Right Section: Photo with Floating Icons */}
           <div className="xl:w-1/2 flex justify-center mb-4 xl:mb-0 relative">
             <Photo />
-            <FloatingIcons/>
+            <FloatingIcons />
           </div>
         </div>
 

@@ -22,7 +22,10 @@ const links = [
     name: "Portfolio",
     path: "/work",
   },
-  
+  {
+    name: "Skills",  // Nouvelle entrée pour Skills
+    path: "/skills",  // Chemin pour la page Skills
+  }
 ];
 
 const MobileNav = () => {

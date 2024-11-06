@@ -40,7 +40,7 @@ const resumeData = {
           duration: "Juin 2018 | Stage, Bondues"
         },
         {
-          company: "Association Maison Des Services à la Personne.",
+          company: "Maison Des Services à la Personne",
           position: "Webmaster",
           duration: "Juin 2018 | Angres"
         },
@@ -84,14 +84,14 @@ const resumeData = {
           items: [
             { icon: <img src="/assets/skills/git.svg" alt="GIT" /> },
             { icon: <img src="/assets/skills/github.svg" alt="Github" /> }
+            
           ]
         },
         {
           category: "Micro services",
           items: [
-            { icon: <img src="/assets/skills/axios.svg" alt="Axios" /> },
-            { icon: <img src="/assets/skills/docker.svg" alt="Docker" /> },
-
+            { icon: <img src="/assets/skills/docker.svg" alt="Docker" className="w-8 h-8" /> },
+            { icon: <img src="/assets/skills/axios.svg" alt="Docker" className="w-8 h-8" /> },
 
           ]
         },

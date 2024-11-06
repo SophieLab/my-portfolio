@@ -4,69 +4,55 @@ const FloatingIcons = () => {
   return (
     <div className="absolute inset-0 flex items-center justify-center -z-10">
       {/* Icônes de compétences techniques */}
-      {/* Icône HTML */}
-      <div className="floating-icon" style={{ top: "20%", left: "15%" }}>
-        <img src="/assets/skills/html.svg" alt="HTML" className="w-10 h-10" />
+      
+      {/* Icône CSS (Top-Left) */}
+      <div className="floating-icon" style={{ top: "22%", right: "70%" }}>
+        <img src="/assets/skills/js.svg" alt="JavaScript" className="w-8 h-8" />
       </div>
-      {/* Icône CSS */}
-      <div className="floating-icon" style={{ top: "10%", left: "40%" }}>
-        <img src="/assets/skills/css.svg" alt="CSS" className="w-10 h-10" />
+      
+      {/* Icône JavaScript (Top-Right) */}
+      <div className="floating-icon" style={{ top: "23%", left: "70%" }}>
+        <img src="/assets/skills/css.svg" alt="CSS" className="w-8 h-8" />
       </div>
-      {/* Icône JavaScript */}
-      <div className="floating-icon" style={{ top: "15%", left: "70%" }}>
-        <img src="/assets/skills/js.svg" alt="JavaScript" className="w-10 h-10" />
+      
+      {/* Icône HTML (Top-Center) */}
+      <div className="floating-icon" style={{ top: "10%", left: "48%", transform: "translateX(-50%)" }}>
+        <img src="/assets/skills/html.svg" alt="HTML" className="w-8 h-8" />
       </div>
-      {/* Icône React */}
-      <div className="floating-icon" style={{ bottom: "10%", left: "20%" }}>
-        <img src="/assets/skills/react.svg" alt="React" className="w-10 h-10" />
+      
+      {/* Icône React (Bottom-Left) */}
+      <div className="floating-icon" style={{ bottom: "50%", left: "18%" }}>
+        <img src="/assets/skills/react.svg" alt="React" className="w-8 h-8" />
       </div>
-      {/* Icône Next.js */}
-      <div className="floating-icon" style={{ bottom: "20%", right: "20%" }}>
-        <img src="/assets/skills/nextjs.svg" alt="Next.js" className="w-10 h-10" />
+      
+      {/* Icône TypeScript (Center-Right) */}
+      <div className="floating-icon" style={{ top: "44%", right: "18%", transform: "translateY(-50%)" }}>
+        <img src="/assets/skills/ts.svg" alt="TypeScript" className="w-8 h-8" />
       </div>
-      {/* Icône TypeScript */}
-      <div className="floating-icon" style={{ top: "50%", left: "80%" }}>
-        <img src="/assets/skills/ts.svg" alt="TypeScript" className="w-10 h-10" />
+
+      {/* Icône Next.js (Bottom-Right) */}
+      <div className="floating-icon" style={{ bottom: "30%", right: "75%" }}>
+        <img src="/assets/skills/nextjs.png" alt="Next.js" className="w-8 h-8" />
       </div>
-      {/* Icône Tailwind */}
-      <div className="floating-icon" style={{ top: "40%", left: "50%" }}>
-        <img src="/assets/skills/tailwind.svg" alt="Tailwind" className="w-10 h-10" />
+      
+      {/* Icône Tailwind (Center-Center) */}
+      <div className="floating-icon" style={{ top: "63%", left: "74%", transform: "translate(-50%, -50%)" }}>
+        <img src="/assets/skills/tailwind.svg" alt="Tailwind" className="w-8 h-8" />
       </div>
-      {/* Icône Storybook */}
-      <div className="floating-icon" style={{ top: "10%", right: "30%" }}>
-        <img src="/assets/skills/storybook.svg" alt="Storybook" className="w-10 h-10" />
+      
+      {/* Icône Figma (Bottom-Center) */}
+      <div className="floating-icon" style={{ bottom: "15%", left: "28%", transform: "translateX(-50%)" }}>
+        <img src="/assets/skills/figma.svg" alt="Figma" className="w-8 h-8" />
       </div>
-      {/* Icône SQL */}
-      <div className="floating-icon" style={{ bottom: "15%", left: "40%" }}>
-        <img src="/assets/skills/sql.svg" alt="SQL" className="w-10 h-10" />
+      
+      {/* Icône Photoshop (Mid-Bottom-Right) */}
+      <div className="floating-icon" style={{ bottom: "16%", right: "25%" }}>
+        <img src="/assets/skills/ps.svg" alt="Photoshop" className="w-8 h-8" />
       </div>
-      {/* Icône MongoDB */}
-      <div className="floating-icon" style={{ bottom: "25%", right: "40%" }}>
-        <img src="/assets/skills/mongodb.svg" alt="MongoDB" className="w-10 h-10" />
-      </div>
-      {/* Icône Axios */}
-      <div className="floating-icon" style={{ top: "30%", right: "15%" }}>
-        <img src="/assets/skills/axios.svg" alt="Axios" className="w-10 h-10" />
-      </div>
-      {/* Icône Docker */}
-      <div className="floating-icon" style={{ bottom: "10%", right: "30%" }}>
-        <img src="/assets/skills/docker.svg" alt="Docker" className="w-10 h-10" />
-      </div>
-      {/* Icône Git */}
-      <div className="floating-icon" style={{ top: "40%", left: "10%" }}>
-        <img src="/assets/skills/git.svg" alt="Git" className="w-10 h-10" />
-      </div>
-      {/* Icône GitHub */}
-      <div className="floating-icon" style={{ top: "70%", left: "20%" }}>
-        <img src="/assets/skills/github.svg" alt="GitHub" className="w-10 h-10" />
-      </div>
-      {/* Icône Figma */}
-      <div className="floating-icon" style={{ top: "40%", right: "20%" }}>
-        <img src="/assets/skills/figma.svg" alt="Figma" className="w-10 h-10" />
-      </div>
-      {/* Icône Photoshop */}
-      <div className="floating-icon" style={{ top: "50%", right: "30%" }}>
-        <img src="/assets/skills/ps.svg" alt="Photoshop" className="w-10 h-10" />
+      
+      {/* Icône Adobe XD (Mid-Top-Right) */}
+      <div className="floating-icon" style={{ top: "85%", right: "47%" }}>
+        <img src="/assets/skills/XD.png" alt="Adobe XD" className="w-8 h-8" />
       </div>
     </div>
   );

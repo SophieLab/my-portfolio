@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiFillGithub } from "react-icons/ai";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const ProjectSlider = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,15 +13,21 @@ const ProjectSlider = ({ projects }) => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
-  if (projects.length === 0) {
+  // Vérifiez si projects est défini et n'est pas vide
+  if (!projects || projects.length === 0) {
     return <p className="text-center text-white">No projects available in this category.</p>;
   }
 
   const currentProject = projects[currentIndex];
 
+  // Vérifiez que currentProject est défini
+  if (!currentProject) {
+    return <p className="text-center text-white">Project not found.</p>;
+  }
+
   return (
     <div className="flex items-start">
-      <div className="project-text w-4/5 pr-2 mb-4"> {/* Ajout d'une margin-bottom ici */}
+      <div className="project-text w-4/5 pr-2 mb-4">
         <h2 className="text-3xl text-white font-bold">{currentProject.title || 'Titre du projet'}</h2>
 
         <p className="mt-2 text-white">
@@ -44,7 +50,7 @@ const ProjectSlider = ({ projects }) => {
             href={currentProject.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-blue-400 underline mt-4"
+            className="flex items-center text-white underline mt-4"
           >
             <AiFillGithub className="mr-2" /> Voir sur GitHub
           </a>
@@ -55,20 +61,20 @@ const ProjectSlider = ({ projects }) => {
             href={currentProject.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 underline mt-2 block"
+            className="text-indigo-700 underline mt-2 block"
           >
             Live Project
           </a>
         )}
       </div>
 
-      <div className="relative w-3/5 flex flex-col items-center justify-center bg-black p-2 rounded-lg h-[400px]"> 
+      <div className="relative w-3/5 flex flex-col items-center justify-center bg-white p-2 rounded-lg h-[400px]"> 
         <button
           onClick={prevProject}
-          className="absolute left-2 bg-transparent text-white p-1 hover:text-blue-400 transition duration-200 z-10 opacity-60 hover:opacity-100"
+          className="absolute left-2 top-0 bottom-0 bg-transparent text-black p-2 hover:bg-white hover:bg-opacity-50 transition duration-200 z-10 opacity-60 hover:opacity-100 flex items-center justify-center"
           aria-label="Previous Project"
         >
-          <FaArrowLeft size={20} />
+          <IoIosArrowBack size={24} />
         </button>
 
         <div className="project-card flex items-center justify-center w-full h-full">
@@ -90,10 +96,10 @@ const ProjectSlider = ({ projects }) => {
 
         <button
           onClick={nextProject}
-          className="absolute right-2 bg-transparent text-white p-1 hover:text-blue-400 transition duration-200 z-10 opacity-60 hover:opacity-100"
+          className="absolute right-2 top-0 bottom-0 bg-transparent text-black p-2 hover:bg-white hover:bg-opacity-50 transition duration-200 z-10 opacity-60 hover:opacity-100 flex items-center justify-center"
           aria-label="Next Project"
         >
-          <FaArrowRight size={20} />
+          <IoIosArrowForward size={24} />
         </button>
       </div>
     </div>
