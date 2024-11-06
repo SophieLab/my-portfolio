@@ -22,7 +22,6 @@ const Page = () => {
   return (
     <div className="work-page flex min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/assets/background2.webp')" }}>
       {/* Sidebar avec position fixe */}
-      <div className="fixed top-0 left-0 w-1/4 h-full z-10 p-4">
         <Sidebar
           config={[
             { label: 'Frontend', value: 'frontend' },
@@ -31,7 +30,6 @@ const Page = () => {
           ]}
           onSelectCategory={handleSelectCategory}
         />
-      </div>
 
       {/* Conteneur des projets, avec un léger espacement */}
       <div className="flex-grow flex items-center justify-center p-12"> {/* Ajout de p-4 pour l'espacement */}
