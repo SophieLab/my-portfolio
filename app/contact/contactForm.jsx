@@ -25,23 +25,22 @@ const ContactForm = () => {
       >
         {/* Titre, texte d'introduction et boutons de contact */}
         <div className="flex flex-col items-center gap-6 p-10 bg-[#27272c]/80 rounded-xl text-center">
-          <h3 className="text-5xl text-accent mb-4">Travaillons ensemble</h3>
-          <p className="text-white/60 max-w-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nihil sapiente pariatur id totam.
-          </p>
+          <h3 className="text-5xl text-white mb-4">Travaillons ensemble</h3>
+          <p className="text-white max-w-lg">
+          Si vous avez des questions ou souhaitez échanger davantage, je serai ravie de vous répondre. N'hésitez pas à me contacter</p>
           
           {/* Boutons de contact sans carrés supplémentaires */}
           <div className="flex gap-6 mt-6">
             <a
               href="tel:+33670398936"
-              className="flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-md hover:bg-violet-700 transition"
+              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-accent text-primary hover:bg-accent-hover transition"
             >
               <FaPhoneAlt className="text-xl" />
               <span className="text-lg">Par téléphone</span>
             </a>
             <a
               href="mailto:labytophie@gmail.com"
-              className="flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-md hover:bg-violet-700 transition"
+              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-accent text-primary hover:bg-accent-hover"
             >
               <FaEnvelope className="text-xl" />
               <span className="text-lg">Par mail</span>

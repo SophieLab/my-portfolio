@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from 'react';
 import Sidebar from '@/components/SideBar';
 import ProjectSlider from '@/components/ProjectsSlider';
@@ -10,35 +9,40 @@ const Page = () => {
   const [projectsList, setProjectsList] = useState([]);
 
   useEffect(() => {
-    // Met à jour la liste des projets en fonction de la catégorie sélectionnée
     setProjectsList(projects[selectedCategory] || []);
-  }, [selectedCategory]);4
+  }, [selectedCategory]);
 
   const handleSelectCategory = (category) => {
-    // Change la catégorie sélectionnée
     setSelectedCategory(category);
   };
 
   return (
-    <div className="work-page flex min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/assets/background2.webp')" }}>
-      {/* Sidebar avec position fixe */}
-        <Sidebar
-          config={[
-            { label: 'Frontend', value: 'frontend' },
-            { label: 'Backend', value: 'backend' },
-            { label: 'UI/UX', value: 'uiux' }
-          ]}
-          onSelectCategory={handleSelectCategory}
-        />
+    <div
+      className="work-page flex min-h-screen bg-cover bg-center px-6 md:px-12 lg:px-16"
+      style={{ backgroundImage: "url('/assets/background2.webp')" }}
+    >
+      <Sidebar
+        config={[
+          { label: 'Frontend', value: 'frontend' },
+          { label: 'Backend', value: 'backend' },
+          { label: 'UI/UX', value: 'uiux' }
+        ]}
+        onSelectCategory={handleSelectCategory}
+      />
 
-      {/* Conteneur des projets, avec un léger espacement */}
-      <div className="flex-grow flex items-center justify-center p-12"> {/* Ajout de p-4 pour l'espacement */}
+      <div className="flex-grow flex flex-col items-start p-6">
+        <h2 className="text-5xl font-bold text-white opacity-40 mt-5 mb-12">
+          Mes projets
+        </h2>
+
         {projectsList.length > 0 ? (
-          <div className="w-full max-w-full"> {/* Utilise toute la largeur sans padding supplémentaire */}
+          <div className="w-full max-w-full">
             <ProjectSlider projects={projectsList} />
           </div>
         ) : (
-          <p className="text-center text-white">Aucun projet disponible pour cette catégorie.</p>
+          <p className="text-center text-white">
+            Aucun projet disponible pour cette catégorie.
+          </p>
         )}
       </div>
     </div>

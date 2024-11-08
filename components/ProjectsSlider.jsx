@@ -1,67 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiFillGithub } from "react-icons/ai";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const ProjectSlider = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fonction pour passer au projet suivant
+  // Reset currentIndex to 0 whenever the projects array changes
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [projects]);
+
   const nextProject = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
-  // Fonction pour revenir au projet précédent
   const prevProject = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
-  // Vérifie si des projets sont disponibles
   if (!projects || projects.length === 0) {
     return <p className="text-center text-white">Aucun projet disponible dans cette catégorie.</p>;
   }
 
   const currentProject = projects[currentIndex];
 
-  // Vérifie si le projet actuel est défini
-  if (!currentProject) {
-    return <p className="text-center text-white">Projet introuvable.</p>;
-  }
+  // Fallback for missing currentProject values
+  const imageUrl = currentProject?.image || 'fallback-image-url.jpg'; // Add a default image if none is provided
+  const projectTitle = currentProject?.title || 'Titre du projet';
+  const projectContext = currentProject?.contexte || 'Contexte non spécifié';
+  const projectRealisation = currentProject?.realisation || 'Réalisation non spécifiée';
 
   return (
-    <div className="flex items-start">
-      {/* Détails du projet */}
-      <div className="project-text w-4/5 pr-2 mb-4">
-        <h2 className="text-3xl text-white font-bold">{currentProject.title || 'Titre du projet'}</h2>
+    <div className="flex flex-col md:flex-row items-start">
+      {/* Project details */}
+      <div className="project-text w-full md:w-6/6 pr-2 mb-4">
+        <h2 className="text-2xl text-white font-bold">{projectTitle}</h2>
         <p className="mt-2 text-white">
-          <strong>Contexte:</strong> {currentProject.contexte || 'Contexte non spécifié'}
+          <strong>Contexte:</strong> {projectContext}
         </p>
         <p className="mt-2 text-white">
-          <strong>Réalisation:</strong> {currentProject.realisation || 'Réalisation non spécifiée'}
+          <strong>Réalisation:</strong> {projectRealisation}
         </p>
-        
-        {/* Affichage des icônes */}
-        <div className="stack flex">
-          {currentProject.icons && currentProject.icons.map((IconComponent, index) => (
-            <div key={index} className="h-8 w-8 mr-2">
+
+        <div className="stack flex flex-wrap mt-8">
+          {currentProject?.icons && currentProject.icons.map((IconComponent, index) => (
+            <div key={index} className="h-10 w-10 mr-4">
               {IconComponent}
             </div>
           ))}
         </div>
 
-        {/* Lien GitHub si disponible */}
-        {currentProject.github && (
+        {currentProject?.github && (
           <a
-            href={String(currentProject.github)} // Conversion en chaîne de caractères pour s'assurer que c'est un lien valide
+            href={String(currentProject.github)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-white underline mt-4"
+            className="flex items-center text-white underline"
           >
             <AiFillGithub className="mr-2" /> Voir sur GitHub
           </a>
         )}
 
-        {/* Lien vers le projet en direct si disponible */}
-        {currentProject.live && (
+        {currentProject?.live && (
           <a
             href={currentProject.live}
             target="_blank"
@@ -73,26 +73,24 @@ const ProjectSlider = ({ projects }) => {
         )}
       </div>
 
-      {/* Image du projet avec navigation */}
-      <div className="relative w-3/5 flex flex-col items-center justify-center bg-white p-2 rounded-lg h-[400px]">
-        {/* Bouton pour le projet précédent */}
+      {/* Project image with navigation */}
+      <div className="relative w-full md:w-3/6 flex flex-col items-center mt-8">
         <button
           onClick={prevProject}
-          className="absolute left-2 top-0 bottom-0 bg-transparent text-black p-2 hover:bg-white hover:bg-opacity-50 transition duration-200 z-10 opacity-60 hover:opacity-100 flex items-center justify-center"
+          className="group absolute left-2 top-0 bottom-0 bg-transparent text-black p-2 z-10 opacity-60 hover:opacity-100 flex items-center justify-center"
           aria-label="Projet précédent"
         >
           <IoIosArrowBack size={24} />
+          <span className="absolute inset-0 bg-black bg-opacity-30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
         </button>
 
-        {/* Image du projet */}
         <div className="project-card flex items-center justify-center w-full h-full">
           <img
-            src={currentProject.image}
-            alt={currentProject.title}
-            className="rounded-lg w-full h-full object-cover"
+            src={imageUrl}
+            alt={projectTitle}
+            className="rounded-lg w-full h-full object-contain"
           />
-          
-          {/* Indicateurs de navigation entre les projets */}
+
           <div className="absolute bottom-2 flex justify-center w-full">
             {projects.map((_, index) => (
               <span
@@ -103,13 +101,13 @@ const ProjectSlider = ({ projects }) => {
           </div>
         </div>
 
-        {/* Bouton pour le projet suivant */}
         <button
           onClick={nextProject}
-          className="absolute right-2 top-0 bottom-0 bg-transparent text-black p-2 hover:bg-white hover:bg-opacity-50 transition duration-200 z-10 opacity-60 hover:opacity-100 flex items-center justify-center"
+          className="group absolute right-2 top-0 bottom-0 bg-transparent text-black p-2 z-10 opacity-60 hover:opacity-100 flex items-center justify-center"
           aria-label="Projet suivant"
         >
           <IoIosArrowForward size={24} />
+          <span className="absolute inset-0 bg-black bg-opacity-30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
         </button>
       </div>
     </div>
