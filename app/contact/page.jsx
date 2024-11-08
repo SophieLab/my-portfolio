@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactForm from "./ContactForm"; // Assurez-vous d'importer correctement votre composant
+import ContactForm from "./contactForm"; // Assurez-vous d'importer correctement votre composant
 
 const Contact = () => {
   const handleFormSubmit = (formData) => {
