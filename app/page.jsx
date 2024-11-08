@@ -39,7 +39,7 @@ const Home = () => {
               Créatrice d’expériences numériques, je transforme vos projets en interfaces intuitives et attrayantes.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-2">
-              <a href="/assets/resume/CV-SophieLabyt.pdf" download className="no-underline">
+              <a href="/assets/Sophie_Labyt_CV.pdf" download className="no-underline">
                 <Button
                   variant="outline"
                   size="lg"
@@ -52,7 +52,7 @@ const Home = () => {
               <div>
                 <Social
                   containerStyles="flex gap-2"
-                  iconStyles="w-9 h-9 border border-white rounded-full flex justify-center items-center text-white text-base hover:bg-accent hover:text-primary transition-colors duration-300"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary transition-colors duration-300"
                 />
               </div>
             </div>
