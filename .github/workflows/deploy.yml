@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Déclenche le workflow lorsque tu pousses vers la branche main
 
 jobs:
   build:
@@ -24,13 +24,12 @@ jobs:
       - run: npm run build
       - run: npm run export
 
-      # Étape 5 : Configurer Git et pousser le dossier 'out' sur la branche gh-pages
+      # Étape 5 : Configurer Git et pousser le contenu de 'out' vers la branche main
       - name: Deploy to GitHub Pages
         run: |
           git config --global user.name 'SophieLab'
           git config --global user.email 'labytsophie@gmail.com'
-          git init
           git remote add origin https://github.com/SophieLab/my-portfolio.git
           git add -A
           git commit -m 'Deploy to GitHub Pages'
-          git push -f origin master:gh-pages
+          git push -f origin main
