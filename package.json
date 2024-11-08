@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build"
-    },
+  },
   "dependencies": {
     "@preline/carousel": "^2.5.0",
     "@radix-ui/react-dialog": "^1.1.2",

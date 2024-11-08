@@ -7,6 +7,10 @@ const stats = [
   { text: "UI Design" },
   { text: "User Experience" },
   { text: "SEO" },
+  { text: "Développement Front-End" },
+  { text: "UI Design" },
+  { text: "User Experience" },
+  { text: "SEO" },
 ];
 
 const Stats = () => {

@@ -6,37 +6,37 @@ const FloatingIcons = () => {
       {/* Icônes de compétences techniques */}
       
       {/* Icône CSS (Top-Left) */}
-      <div className="floating-icon" style={{ top: "22%", right: "70%" }}>
+      <div className="floating-icon" style={{ top: "22%", right: "75%" }}>
         <img src="/assets/skills/js.svg" alt="JavaScript" className="w-8 h-8" />
       </div>
       
       {/* Icône JavaScript (Top-Right) */}
-      <div className="floating-icon" style={{ top: "23%", left: "70%" }}>
+      <div className="floating-icon" style={{ top: "23%", left: "75%" }}>
         <img src="/assets/skills/css.svg" alt="CSS" className="w-8 h-8" />
       </div>
       
       {/* Icône HTML (Top-Center) */}
-      <div className="floating-icon" style={{ top: "10%", left: "48%", transform: "translateX(-50%)" }}>
+      <div className="floating-icon" style={{ top: "11%", left: "48%", transform: "translateX(-50%)" }}>
         <img src="/assets/skills/html.svg" alt="HTML" className="w-8 h-8" />
       </div>
       
       {/* Icône React (Bottom-Left) */}
-      <div className="floating-icon" style={{ bottom: "50%", left: "18%" }}>
+      <div className="floating-icon" style={{ bottom: "50%", left: "8%" }}>
         <img src="/assets/skills/react.svg" alt="React" className="w-8 h-8" />
       </div>
       
       {/* Icône TypeScript (Center-Right) */}
-      <div className="floating-icon" style={{ top: "44%", right: "18%", transform: "translateY(-50%)" }}>
+      <div className="floating-icon" style={{ top: "44%", right: "8%", transform: "translateY(-50%)" }}>
         <img src="/assets/skills/ts.svg" alt="TypeScript" className="w-8 h-8" />
       </div>
 
       {/* Icône Next.js (Bottom-Right) */}
-      <div className="floating-icon" style={{ bottom: "30%", right: "75%" }}>
+      <div className="floating-icon" style={{ bottom: "30%", right: "80%" }}>
         <img src="/assets/skills/nextjs.png" alt="Next.js" className="w-8 h-8" />
       </div>
       
       {/* Icône Tailwind (Center-Center) */}
-      <div className="floating-icon" style={{ top: "63%", left: "74%", transform: "translate(-50%, -50%)" }}>
+      <div className="floating-icon" style={{ top: "63%", left: "80%", transform: "translate(-50%, -50%)" }}>
         <img src="/assets/skills/tailwind.svg" alt="Tailwind" className="w-8 h-8" />
       </div>
       
