@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://<votre-nom-utilisateur>.github.io/my-portfolio",
+  "homepage": "https://<SophieLab>.github.io/my-portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
