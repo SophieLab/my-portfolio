@@ -9,7 +9,7 @@ const Sidebar = ({ config, onSelectCategory }) => {
     };
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-gray-800 bg-opacity-75 text-white py-4 rounded-t-3xl shadow-xl">
+        <div className="fixed bottom-0 left-0 right-0 bg-gray-800 bg-opacity-75 text-white py-4 rounded-t-3xl shadow-xl z-50">
             <ul className="flex justify-around">
                 {config.map(({ value, label }) => (
                     <li key={value} className="text-center mx-2">

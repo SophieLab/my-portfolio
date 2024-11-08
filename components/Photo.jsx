@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import FloatingIcons from '@/components/FloatingIcons'; // Importation de FloatingIcons
 
 const Photo = () => {
   return (
@@ -63,13 +64,17 @@ const Photo = () => {
             priority
             quality={100}
             fill
-            alt=""
+            alt="Image de Sophie Labyt"
             className="object-contain"
           />
         </motion.div>
       </motion.div>
+
+      {/* Floating icons intégrés ici */}
+      <FloatingIcons />
     </div>
   );
 };
 
 export default Photo;
+ 
