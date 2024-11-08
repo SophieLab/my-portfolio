@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Étape 1 : Récupérer le code source du dépôt
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Étape 2 : Installer Node.js
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 14
-
+’
       # Étape 3 : Installer les dépendances du projet
       - run: npm install
 
