@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
-import Card from "@/components/Card";
+import Card from "@/components/card";
 import resumeData from "./resumeData";
 
 const FormationsSection = () => (
