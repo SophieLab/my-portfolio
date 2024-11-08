@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    basePath: '/my-portfolio',
+  
+    assetPrefix: './',
+  
+    reactStrictMode: true,
+  };
+  
+  export default nextConfig;
+  
