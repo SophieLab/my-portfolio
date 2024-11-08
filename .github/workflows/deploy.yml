@@ -15,8 +15,8 @@ jobs:
       # Étape 2 : Installer Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
-’
+          node-version: '18'
+
       # Étape 3 : Installer les dépendances du projet
       - run: npm install
 
@@ -24,11 +24,12 @@ jobs:
       - run: npm run build
       - run: npm run export
 
-      # Étape 5 : Configurer Git et pousser le contenu de 'out' vers la branche main
+      # Étape 5 : Déployer vers la branche 'main'
       - name: Deploy to GitHub Pages
         run: |
           git config --global user.name 'SophieLab'
           git config --global user.email 'labytsophie@gmail.com'
+          git init
           git remote add origin https://github.com/SophieLab/my-portfolio.git
           git add -A
           git commit -m 'Deploy to GitHub Pages'
