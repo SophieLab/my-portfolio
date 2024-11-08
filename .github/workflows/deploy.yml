@@ -9,18 +9,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Étape 1 : Récupérer le code source du dépôt
       - uses: actions/checkout@v2
+
+      # Étape 2 : Installer Node.js
       - uses: actions/setup-node@v2
         with:
           node-version: 14
+
+      # Étape 3 : Installer les dépendances du projet
       - run: npm install
+
+      # Étape 4 : Créer la version statique de l'application Next.js
       - run: npm run build
-      - name: Next Pages
-        uses: anorcle/next-pages@v1.0
-      - name: Commit and Push
+      - run: npm run export
+
+      # Étape 5 : Configurer Git et pousser le dossier 'out' sur la branche gh-pages
+      - name: Deploy to GitHub Pages
         run: |
           git config --global user.name 'SophieLab'
           git config --global user.email 'labytsophie@gmail.com'
+          git init
+          git remote add origin https://github.com/SophieLab/my-portfolio.git
           git add -A
           git commit -m 'Deploy to GitHub Pages'
-          git push
+          git push -f origin master:gh-pages
