@@ -7,17 +7,9 @@ import projects from './projects';
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState('frontend');
   const [projectsList, setProjectsList] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  // Fetch projects based on selected category
   useEffect(() => {
-    const fetchProjects = () => {
-      setLoading(true);  // Start loading
-      setProjectsList(projects[selectedCategory] || []); // Get projects for the selected category
-      setLoading(false);  // Stop loading once projects are fetched
-    };
-
-    fetchProjects();
+    setProjectsList(projects[selectedCategory] || []);
   }, [selectedCategory]);
 
   const handleSelectCategory = (category) => {
@@ -29,12 +21,11 @@ const Page = () => {
       className="work-page flex min-h-screen bg-cover bg-center px-6 md:px-12 lg:px-16"
       style={{ backgroundImage: "url('/assets/background2.webp')" }}
     >
-      {/* Sidebar for category selection */}
       <Sidebar
         config={[
           { label: 'Frontend', value: 'frontend' },
           { label: 'Backend', value: 'backend' },
-          { label: 'UI/UX', value: 'uiux' },
+          { label: 'UI/UX', value: 'uiux' }
         ]}
         onSelectCategory={handleSelectCategory}
       />
@@ -44,20 +35,14 @@ const Page = () => {
           Mes projets
         </h2>
 
-        {/* Loading state */}
-        {loading ? (
-          <p className="text-center text-white">Chargement...</p>
+        {projectsList.length > 0 ? (
+          <div className="w-full max-w-full">
+            <ProjectSlider projects={projectsList} />
+          </div>
         ) : (
-          <>
-            {/* Display project slider if projects are available */}
-            {projectsList.length > 0 ? (
-              <div className="w-full max-w-full">
-                <ProjectSlider projects={projectsList} />
-              </div>
-            ) : (
-              <p className="text-center text-white">Aucun projet disponible pour cette catégorie.</p>
-            )}
-          </>
+          <p className="text-center text-white">
+            Aucun projet disponible pour cette catégorie.
+          </p>
         )}
       </div>
     </div>

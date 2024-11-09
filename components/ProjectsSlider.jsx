@@ -5,7 +5,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const ProjectSlider = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Reset currentIndex to 0 whenever the projects array changes
+  // Réinitialisation de currentIndex lorsque le tableau projects change
   useEffect(() => {
     setCurrentIndex(0);
   }, [projects]);
@@ -24,16 +24,16 @@ const ProjectSlider = ({ projects }) => {
 
   const currentProject = projects[currentIndex];
 
-  // Fallback for missing currentProject values
-  const imageUrl = currentProject?.image || 'fallback-image-url.jpg'; // Add a default image if none is provided
+  // Fallback pour les données manquantes
+  const imageUrl = currentProject?.image || 'fallback-image-url.jpg'; // Image par défaut
   const projectTitle = currentProject?.title || 'Titre du projet';
   const projectContext = currentProject?.contexte || 'Contexte non spécifié';
   const projectRealisation = currentProject?.realisation || 'Réalisation non spécifiée';
 
   return (
     <div className="flex flex-col md:flex-row items-start">
-      {/* Project details */}
-      <div className="project-text w-full md:w-6/6 mr-40  mb-4 max-h-96 overflow-auto">
+      {/* Détails du projet */}
+      <div className="project-text w-full md:w-6/6 mr-40 mb-4 max-h-96 overflow-auto">
         <h2 className="text-2xl text-white font-bold">{projectTitle}</h2>
         <p className="mt-2 text-white">
           <strong>Contexte:</strong> {projectContext}
@@ -73,10 +73,10 @@ const ProjectSlider = ({ projects }) => {
         )}
       </div>
 
-      {/* Add some space between the text and the slider */}
+      {/* Espace entre le texte et l'image */}
       <div className="my-4"></div>
 
-      {/* Project image with navigation */}
+      {/* Image du projet avec navigation */}
       <div className="relative w-full md:w-3/6 flex flex-col items-center mt-8">
         <button
           onClick={prevProject}

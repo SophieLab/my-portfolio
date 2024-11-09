@@ -16,8 +16,9 @@ const FormationsSection = () => {
         <ScrollAreaViewport>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
             {formations?.items?.length > 0 ? (
-              formations.items.map((item, index) => (
-                <Card key={index} title={item.degree} subtitle={item.institution}>
+              formations.items.map((item) => (
+                // Utilisation de item.id ou item.degree comme clé
+                <Card key={item.id || item.degree} title={item.degree} subtitle={item.institution}>
                   <p className="text-sm text-gray-400">{item.duration}</p>
                 </Card>
               ))
