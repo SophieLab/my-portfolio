@@ -17,8 +17,8 @@ const ExperiencesSection = () => {
         <ScrollAreaViewport>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             {experiences?.items?.length > 0 ? (
-              experiences.items.map((item, index) => (
-                <Card key={index} title={item.position} subtitle={item.company}>
+              experiences.items.map((item) => (
+                <Card key={item.id || item.position} title={item.position} subtitle={item.company}>
                   <p className="text-sm text-gray-400">{item.duration}</p>
                 </Card>
               ))
