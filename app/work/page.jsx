@@ -9,11 +9,11 @@ const Page = () => {
   const [projectsList, setProjectsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Update projects list when the selected category changes
+  // Fetch projects based on selected category
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchProjects = () => {
       setLoading(true);  // Start loading
-      setProjectsList(projects[selectedCategory] || []); // Fetch projects for the selected category
+      setProjectsList(projects[selectedCategory] || []); // Get projects for the selected category
       setLoading(false);  // Stop loading once projects are fetched
     };
 
