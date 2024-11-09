@@ -1,23 +1,15 @@
-"use client";
+"use client"; // Assurez-vous que c'est un composant côté client
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactForm from "./contactForm";
+import ContactForm from "./contactForm"; // Assurez-vous d'importer correctement votre composant
 
 const Contact = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // Indique que le composant est monté côté client
-  }, []);
-
   const handleFormSubmit = (formData) => {
+    // Ici, vous pouvez gérer les données du formulaire ou effectuer d'autres actions sans API externe.
     console.log("Données du formulaire:", formData);
-    alert("Message envoyé !");
+    alert("Message envoyé !"); // Message de confirmation simple
   };
-
-  if (!isClient) return null; // Évite le rendu côté serveur
 
   return (
     <div className="relative h-screen w-full">
@@ -35,7 +27,7 @@ const Contact = () => {
         animate={{ opacity: 1, transition: { delay: 0.4, duration: 0.4, ease: "easeIn" } }}
         className="relative py-6 h-full flex items-center justify-center"
       >
-        <ContactForm onSubmit={handleFormSubmit} />
+          <ContactForm onSubmit={handleFormSubmit} />
       </motion.section>
     </div>
   );
