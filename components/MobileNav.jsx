@@ -11,10 +11,6 @@ const links = [
     path: "/",
   },
   {
-    name: "services",
-    path: "/services",
-  },
-  {
     name: "resume",
     path: "/resume",
   },
@@ -25,7 +21,11 @@ const links = [
   {
     name: "Skills",  // Nouvelle entrée pour Skills
     path: "/skills",  // Chemin pour la page Skills
-  }
+  },
+  {
+    name: "Travaillons ensemble",
+    path: "/contact",
+  },
 ];
 
 const MobileNav = () => {
@@ -46,15 +46,16 @@ const MobileNav = () => {
         </div>
         {/* nav */}
         <nav className="flex flex-col justify-center items-center gap-8">
-          {links.map((link, index) => {
+          {links.map((link) => {
+            const isActive = link.path === pathname;
             return (
               <Link
                 href={link.path}
-                key={index}
+                key={link.path}  // Utilisation de link.path comme clé unique
                 className={`${
-                  link.path === pathname &&
-                  "text-accent border-b-2 border-accent"
+                  isActive && "text-accent border-b-2 border-accent"
                 } text-xl capitalize hover:text-accent transition-all`}
+                aria-current={isActive ? "page" : undefined}  // Accessibilité : lien actif
               >
                 {link.name}
               </Link>

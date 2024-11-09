@@ -17,7 +17,7 @@ const Home = () => {
           priority
           quality={100}
           fill
-          alt="Background illustrating the home section with abstract design"
+          alt="Abstract design background illustrating the home section"
           className="object-cover"
         />
       </div>
@@ -29,7 +29,7 @@ const Home = () => {
           {/* Text Section */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <h1 className="h1 mb-2">
-            <span className="text-indigo-200 opacity-20 text-5xl">Bonjour, je suis</span> <br />
+              <span className="text-indigo-200 opacity-20 text-5xl">Bonjour, je suis</span> <br />
               <span className="text-white">Sophie Labyt</span>
             </h1>
             <span className="text-xl text-indigo-200">Développeuse Front-End spécialisée en UX/UI Design</span>

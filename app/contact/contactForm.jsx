@@ -3,8 +3,19 @@
 import Image from "next/image";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const ContactForm = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Assure que le composant est monté côté client avant l'animation
+  }, []);
+
+  if (!isClient) {
+    return null; // Rendu initial neutre côté serveur
+  }
+
   return (
     <div className="relative h-screen w-full">
       {/* Image d'arrière-plan couvrant toute la page */}
@@ -29,7 +40,7 @@ const ContactForm = () => {
           <p className="text-white max-w-lg">
           Si vous avez des questions ou souhaitez échanger davantage, je serai ravie de vous répondre. N'hésitez pas à me contacter</p>
           
-          {/* Boutons de contact sans carrés supplémentaires */}
+          {/* Boutons de contact */}
           <div className="flex gap-6 mt-6">
             <a
               href="tel:+33670398936"

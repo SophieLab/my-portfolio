@@ -8,7 +8,6 @@ const links = [
     name: "home",
     path: "/",
   },
-
   {
     name: "CV",
     path: "/resume",
@@ -23,14 +22,16 @@ const Nav = () => {
   const pathname = usePathname();
   return (
     <nav className="flex gap-8">
-      {links.map((link, index) => {
+      {links.map((link) => {
+        const isActive = link.path === pathname;
         return (
           <Link
             href={link.path}
-            key={index}
+            key={link.path}
             className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
+              isActive ? "text-accent border-b-2 border-accent" : ""
             } capitalize font-medium hover:text-accent transition-all`}
+            aria-current={isActive ? "page" : undefined}
           >
             {link.name}
           </Link>
